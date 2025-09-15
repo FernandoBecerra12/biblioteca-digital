@@ -1,12 +1,21 @@
 header {
   background: #1a1a2e;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 1.5rem;
+  position: relative; 
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100px; 
 }
 
-nav {
-  margin-top: 10px;
+.header-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.header-content h1 {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.6rem;
+  color: white;
 }
 
 nav a {
@@ -14,6 +23,7 @@ nav a {
   color: #00eaff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
@@ -24,4 +34,71 @@ nav a:hover {
 nav a.active {
   color: #ffdd00;
   font-weight: bold;
+}
+
+
+.user-menu {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  z-index: 10;
+}
+
+.user-icon {
+  width: 40px;
+  height: 40px;
+  background: #00a8ff;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.user-icon:hover {
+  background: #0088cc;
+}
+
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.user-menu:hover .dropdown {
+  display: block;
+}
+
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown li {
+  padding: 12px 20px;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.dropdown li:hover {
+  background: #f0f0f0;
+  color: #00a8ff;
+}
+
+.dropdown li:not(:last-child) {
+  border-bottom: 1px solid #eee;
 }
